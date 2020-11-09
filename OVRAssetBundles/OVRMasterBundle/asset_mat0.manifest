@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 3007339650
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9dfe6c28b0f080ea893943b6709824d2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 22357172b8cea85847937e8f62d0c077
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Oculus/VR/Materials/CubeMaterial.mat
+Dependencies:
+- F:/UnityProjects/JonathanLeeMP2VR/OVRAssetBundles/OVRMasterBundle/asset_png0
