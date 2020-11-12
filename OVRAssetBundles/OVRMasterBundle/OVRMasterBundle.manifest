@@ -1,22 +1,23 @@
 ManifestFileVersion: 0
-CRC: 4047179573
+CRC: 172986788
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: asset_resources
       Dependencies: {}
     Info_1:
-      Name: scene_room
+      Name: scene_mp2scene
       Dependencies:
-        Dependency_0: asset_mat0
-        Dependency_1: asset_prefab0
+        Dependency_0: asset_resources
+        Dependency_1: asset_mat0
+        Dependency_2: asset_fbx0
+        Dependency_3: asset_prefab0
     Info_2:
-      Name: asset_png0
+      Name: asset_mat0
       Dependencies: {}
     Info_3:
-      Name: asset_mat0
-      Dependencies:
-        Dependency_0: asset_png0
+      Name: asset_fbx0
+      Dependencies: {}
     Info_4:
       Name: asset_prefab0
       Dependencies: {}
