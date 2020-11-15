@@ -65,10 +65,6 @@ public class OVRGrabber : MonoBehaviour
 
     [SerializeField]
     protected GameObject m_player;
-
-    [SerializeField]
-    protected Text debugText;
-
 	protected bool m_grabVolumeEnabled = true;
     protected Vector3 m_lastPos;
     protected Quaternion m_lastRot;
