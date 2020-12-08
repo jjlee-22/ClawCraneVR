@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/ClawCrane.unity
+    guid: 55167c2b5b4fdd841a61ef13e8b5c982
+  - enabled: 0
     path: Assets/Scenes/MP2Scene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
