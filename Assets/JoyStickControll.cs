@@ -5,13 +5,15 @@ using UnityEngine;
 public class JoyStickControll : MonoBehaviour
 {
     public GameObject top_end;
+    public GameObject head;
     Quaternion origin_rotation;
     Vector3 ori_pos;
     // Start is called before the first frame update
     void Start()
     {
         origin_rotation = transform.rotation;
-        ori_pos = top_end.transform.position;
+        ori_pos = head.transform.position;
+        top_end.transform.position = ori_pos;
     }
 
     // Update is called once per frame
