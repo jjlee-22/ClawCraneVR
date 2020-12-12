@@ -16,7 +16,7 @@ public class JoyStickInput : MonoBehaviour
     void Update()
     {
         Vector3 rot = transform.rotation.eulerAngles;
-        Vector3 node_origin = the_node.GetComponent<TestSceneNode>().NodeOrigin;
+        Vector3 node_origin = the_node.NodeOrigin;
         float x = 0;
         float z = 0;
         if(6 <= rot.z && rot.z < 31)
@@ -36,6 +36,6 @@ public class JoyStickInput : MonoBehaviour
             z = -(60 - rot.x + 300) * sensitivity;
         }
         node_origin = node_origin+ new Vector3(x, 0, z);
-        the_node.GetComponent<TestSceneNode>().NodeOrigin = node_origin;
+        the_node.NodeOrigin = node_origin;
     }
 }
