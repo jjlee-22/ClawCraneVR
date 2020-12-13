@@ -6570,6 +6570,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   the_node: {fileID: 1186799864}
+  xRange: 0.3
+  zRange: 0.3
 --- !u!1 &1857061409
 GameObject:
   m_ObjectHideFlags: 0
