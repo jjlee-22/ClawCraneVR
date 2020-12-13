@@ -27,6 +27,7 @@ public class GrabDetect : MonoBehaviour
                 if (dist <= 0.5f)
                 {
                     child.parent = transform;
+                    child.gameObject.GetComponent<Rigidbody>().isKinematic = true;
                     break;
                 }
             }
