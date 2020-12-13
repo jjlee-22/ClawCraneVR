@@ -1,12 +1,8 @@
 /************************************************************************************
 Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
 
-Licensed under the Oculus Master SDK License Version 1.0 (the "License"); you may not use
-the Utilities SDK except in compliance with the License, which is provided at the time of installation
-or download, or which otherwise accompanies this software in either electronic or hard copy form.
-
-You may obtain a copy of the License at
-https://developer.oculus.com/licenses/oculusmastersdk-1.0/
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
 
 Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
 under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
@@ -16,7 +12,6 @@ permissions and limitations under the License.
 
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 /// <summary>
 /// Allows grabbing and throwing of objects with the OVRGrabbable component on them.
@@ -65,6 +60,7 @@ public class OVRGrabber : MonoBehaviour
 
     [SerializeField]
     protected GameObject m_player;
+
 	protected bool m_grabVolumeEnabled = true;
     protected Vector3 m_lastPos;
     protected Quaternion m_lastRot;
@@ -126,8 +122,8 @@ public class OVRGrabber : MonoBehaviour
 		SetPlayerIgnoreCollision(gameObject, true);
     }
 
-	// Using Update instead of FixedUpdate. Doing this in FixedUpdate causes visible judder even with 
-	// somewhat high tick rates, because variable numbers of ticks per frame will give hand poses of 
+	// Using Update instead of FixedUpdate. Doing this in FixedUpdate causes visible judder even with
+	// somewhat high tick rates, because variable numbers of ticks per frame will give hand poses of
 	// varying recency. We want a single hand pose sampled at the same time each frame.
 	// Note that this can lead to its own side effects. For example, if m_parentHeldObject is false, the
 	// grabbed objects will be moved with MovePosition. If this is called in Update while the physics
