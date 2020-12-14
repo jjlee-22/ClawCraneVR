@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using OculusSampleFramework;
 
 public class GrabDetect : MonoBehaviour
 {
@@ -11,12 +12,21 @@ public class GrabDetect : MonoBehaviour
     bool grab_complete;
     bool is_grabbing;
     bool is_releasing;
+    bool buttonPressed;
     // Start is called before the first frame update
     void Start()
     {
         grab_complete = false;
         is_grabbing = false;
         is_releasing = false;
+    }
+
+    public void GrabPrize(InteractableStateArgs obj)
+    {
+        if (obj.NewInteractableState == InteractableState.ActionState)
+        {
+            buttonPressed = true;
+        }
     }
 
     // Update is called once per frame

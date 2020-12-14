@@ -5,7 +5,7 @@ using UnityEngine;
 public class JoyStickRotation : MonoBehaviour
 {
     public GameObject primitive;
-    float sensitivity = 0.01f;
+    public float sensitivity;
     // Start is called before the first frame update
     void Start()
     {
