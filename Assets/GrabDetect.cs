@@ -117,7 +117,8 @@ public class GrabDetect : MonoBehaviour
             {
                 Vector3 prize_pos = child.position;
                 float dist = (prize_pos - transform.position).magnitude;
-                if (dist <= 0.5f)
+                Vector3 s = child.localScale;
+                if (dist <= s.x -0.1f)
                 {
                     Debug.Log("Grabbed something");
                     has_grab = true;
