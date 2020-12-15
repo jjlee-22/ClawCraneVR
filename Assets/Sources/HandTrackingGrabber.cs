@@ -10,6 +10,7 @@ public class HandTrackingGrabber : OVRGrabber
     private OVRHand m_hand;
     public Text debugTextisPinching;
     public Text debugTextisGrabbing;
+    public float pinchThreshold;
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -26,7 +27,9 @@ public class HandTrackingGrabber : OVRGrabber
     }
     void CheckIndexPinch()
     {
-        bool isIndexFingerPinching = m_hand.GetFingerIsPinching(OVRHand.HandFinger.Index);
+        float pinchStrength = GetComponent<OVRHand>().GetFingerPinchStrength(OVRHand.HandFinger.Index);
+        //bool isIndexFingerPinching = m_hand.GetFingerIsPinching(OVRHand.HandFinger.Index);
+        bool isIndexFingerPinching = pinchStrength > pinchThreshold;
 
         if (isIndexFingerPinching)
         {
