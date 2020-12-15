@@ -1,15 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class JoyStickInput : MonoBehaviour
 {
     public TestSceneNode the_node;
+    public float xRange;
+    public float zRange;
+    private Vector3 xMax;
+    private Vector3 zMax;
     float sensitivity = 0.001f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Vector3 node_origin = the_node.NodeOrigin;
+        xMax = node_origin + new Vector3(xRange,0,0);
+        zMax = node_origin + new Vector3(0,0,zRange);
     }
 
     // Update is called once per frame
@@ -36,6 +43,14 @@ public class JoyStickInput : MonoBehaviour
             z = -(60 - rot.x + 300) * sensitivity;
         }
         node_origin = node_origin+ new Vector3(x, 0, z);
+
+        if(Math.Abs(node_origin.x) >= Math.Abs(xMax.x)) {
+            return;
+        }
+        if(Math.Abs(node_origin.z) >= Math.Abs(zMax.z)) {
+            return;
+        }
+
         the_node.NodeOrigin = node_origin;
     }
 }
